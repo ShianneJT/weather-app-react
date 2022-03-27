@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
-// import ReactAnimatedWeather from "react-animated-weather";
 
 export default function Weather(props) {
 	const [weatherData, setWeatherData] = useState({ ready: false });
 	const [city, setCity] = useState(props.defaultCity);
+
 	function handleResponse(response) {
-		console.log(response.data);
 		setWeatherData({
 			ready: true,
 			city: response.data.name,
@@ -17,15 +16,9 @@ export default function Weather(props) {
 			wind: response.data.wind.speed,
 			description: response.data.weather[0].description,
 			date: new Date(response.data.dt * 1000),
+			icon: response.data.weather[0].icon,
 		});
 	}
-
-	const defaults = {
-		icon: "RAIN",
-		color: "#091e42",
-		size: "40px",
-		animate: true,
-	};
 
 	function search() {
 		let apiKey = "cee89d2ce28328a0b51ee85c0d36674d";

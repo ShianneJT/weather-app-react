@@ -9,6 +9,7 @@
 
 .Weather .current-temperature {
 	font-size: 48px;
+	margin-left: 10px;
 }
 
 .Weather .current-temperature-units {
