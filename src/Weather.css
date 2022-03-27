@@ -7,15 +7,25 @@
 	overflow: hidden;
 }
 
+.Weather canvas {
+	max-height: 40px;
+	top: -24px;
+	align-self: center;
+}
+
 .Weather .current-temperature {
 	font-size: 48px;
 	margin-left: 10px;
 }
 
-.Weather .current-temperature-units {
+.Weather .current-temperature-unit {
 	font-size: 16px;
 	position: relative;
 	top: -24px;
+}
+
+.Weather a {
+	text-decoration: none;
 }
 
 .Weather ul {
