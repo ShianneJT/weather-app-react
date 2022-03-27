@@ -6,7 +6,7 @@ export default function App() {
 		<div className="App">
 			<div className="container">
 				<h1>Weather Search</h1>
-				<Weather />
+				<Weather defaultCity="Salt Lake City" />
 				<div className="text-center">
 					<a href="https://github.com/ShianneJT/weather-app-react" target="_blank" rel="noreferrer">
 						Open-source code
